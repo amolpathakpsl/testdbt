@@ -1,0 +1,17 @@
+my-snowflake-db:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: persistent
+
+      # User/password auth
+      user: test
+      password: test
+
+      role: [user role]
+      database: amol_db
+      warehouse: [warehouse name]
+      schema: [dbt schema]
+      threads: [1 or more]
+      client_session_keep_alive: False
